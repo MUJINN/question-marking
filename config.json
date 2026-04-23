@@ -1,0 +1,40 @@
+{
+  "api": {
+    "url": "http://dify.iyunxiao.com/v1/workflows/run",
+    "timeout": 90,
+    "retry_attempts": 3,
+    "retry_wait_multiplier": 1,
+    "retry_wait_max": 10
+  },
+  "concurrency": {
+    "max_concurrent_requests": 20,
+    "batch_size": 20
+  },
+  "directories": {
+    "output_response_dir": "api_responses",
+    "dimension_response_dir": "api_responses/dimension_response",
+    "cache_output_dir": "cache_output",
+    "score_dimension_cache_dir": "cache_output/score_dimension_cache",
+    "evaluation_results_dir": "evaluation_results_dir",
+    "logs_dir": "logs"
+  },
+  "processing": {
+    "max_global_retries": 3,
+    "enable_cache": true,
+    "enable_preload": false
+  },
+  "monitoring": {
+    "enable_performance_metrics": true,
+    "metrics_interval_seconds": 60,
+    "enable_detailed_logging": true
+  },
+  "validation": {
+    "strict_mode": true,
+    "required_fields": [
+      "question_stem",
+      "standard_answer",
+      "student_answer",
+      "total_score"
+    ]
+  }
+}

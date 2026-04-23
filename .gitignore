@@ -1,0 +1,24 @@
+# Environment variables
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Runtime outputs
+logs/
+api_responses/
+cache_output/
+evaluation_results_dir/
+processed_outputs_*/
+run_*/
+failed_samples.log
+
+# Local sample data
+chemistry/
